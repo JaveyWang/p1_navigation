@@ -15,8 +15,10 @@ This is a project that trains a agent that can navigate in the collect bananas t
     - numpy==1.18.1
 
 ## Getting Started
-* navigation.ipynb - 
-training code.
+* navigation.ipynb - training code
+1. We implement a Double-DQN algorithm which selects action and evaluates action using seperate networks. More details can be seen in model.py file.
+2. The network architecture is a 4 layers fully-connected network along with the ReLU activation function, the number of output units are 256, 128, 32, 4 respectively.
+3. Hyperparameters. The code is similar to the DQN excersise solution, except for the hyperparameter TAU, we set it from 1e-3 to 5e-3 for updating the target network much faster, because this Pick-Banana task need less episodes to convergence (up to 2000).
 
 * report.ipynb - 
 Provide a description of the implementation and plot average reward curve that using the pretrained model weights.
